@@ -6,22 +6,19 @@ export default function RightSideContent() {
         <div className="custom-scroll-apply">
             <section className="py-16 px-0 text-left">
                 {/* Force full alignment with inline styles */}
-                <div className="w-full max-w-none">
+                <div className="w-full max-w-none mb-5">
                     <h2 className="text-8xl font-bold leading-none tracking-normal">
                         FRONTEND
                     </h2>
-                    <h2 className="text-8xl font-bold text-neutral-700 leading-none tracking-normal">
+                    <h2 className="text-8xl font-bold color-secondary leading-none tracking-normal">
                         DEVELOPER
                     </h2>
 
                 </div>
 
                 {/* Description */}
-                <p className="text-lg max-w-3xl text-neutral-500 dark:text-neutral-300">
-                    I am passionate about frontend development, SaaS products, and have expertise
-                    in designing and developing scalable digital solutions. I have worked on projects
-                    involving CI/CD tools and pipelines, developer insights, DORA metrics, EMS, and
-                    many more innovative technologies.
+                <p className="text-lg max-w-3xl color-tertiary">
+                    Building scalable apps, reusable components, and seamless UI/UX with 5+ years of experience. Skilled in React.Js, team leadership, and SaaS tools like BuildPiper & Rapple (EMS).
                 </p>
             </section>
 

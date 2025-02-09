@@ -18,7 +18,8 @@ export default function Portfolio() {
 
         <div className="min-h-screen p-8 grid grid-cols-[420px_auto] gap-6">
           
-          <LeftSideSection />
+        <LeftSideSection className="sticky top-[80px] self-start" />
+
 
          <RightSideContent />
           

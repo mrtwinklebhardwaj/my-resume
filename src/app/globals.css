@@ -3,21 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: rgb(21 19 18);
+  --background: #fff;
+  --foreground: #2f2f2f;
+  --color-secondary: #787878;
+  --color-tertiary: #505050;
   --font-montserrat: "Montserrat", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: rgb(21 19 18);
-    --foreground: #ededed;
+    --background: #2f2f2f;;
+    --foreground: #fff;
   }
 }
 
 body {
-  color: var(--background);
-  background: var(--foreground);
+  color: var(--foreground);
+  background: var(--background);
   font-family: var(--font-montserrat);
 }
 h1, h2, h3, h4, h5, h6 {
@@ -26,6 +28,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block; /* Default behavior */
 }
 
+.color-secondary{
+  color: var(--color-secondary)
+}
+.color-tertiary{
+  color:var(--color-tertiary)
+}
 
 .custom-scroll-apply::-webkit-scrollbar {
   display: none;
@@ -48,4 +56,15 @@ h1, h2, h3, h4, h5, h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #dadada;
+}
+
+.custom-card{
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 25px 25px 50px #bebebe, 
+             -25px -25px 50px #ffffff;
+}
+.nav-bg{
+  background-color: #011327;
+  padding:0px 20px
 }
