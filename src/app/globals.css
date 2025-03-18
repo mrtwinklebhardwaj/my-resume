@@ -42,3 +42,29 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #dadada;
 }
+.custom-class-nav{
+  border-radius: 6px;
+  
+
+}
+.custom-class-nav .custom-class-nav-item{
+  padding: 10px 15px;
+}
+.custom-class-nav .custom-class-nav-item:hover{
+  background-color: #fff;
+  color: #0086ff;
+  border-radius: 6px;
+}
+.custom-class-nav .custom-class-nav-item .absolute{
+  bottom: -28px;
+}
+.custom-class-nav-tooltip{
+  width:fit-content;
+  max-width: 108px;
+  white-space: nowrap;
+}
+.seprator{
+  background-color: #dedede;
+  height: 100%;
+  width: 1px;
+}

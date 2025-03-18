@@ -6,30 +6,14 @@ import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaEnvelope, FaHome, FaPro
 import { TooltipProvider } from './components/Tooltip';
 import { Card, CardContent } from './components/CardComponents';
 import { Button } from './components/Buttons';
+import Navbar from './components/Navbar';
 
 export default function Portfolio() {
   return (
     <TooltipProvider>
       <div className="bg-gray-900 text-white min-h-screen p-8 flex flex-col height-100vh">
         {/* Top Navigation */}
-        <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-gray-800 p-4 rounded-full shadow-lg flex gap-6 text-white text-2xl z-50">
-          <div className="relative group">
-            <a href="#home" className="hover:text-blue-500"><FaHome /></a>
-            <span className="absolute left-1/2 transform -translate-x-1/2 bottom-8 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-xs px-2 py-1 rounded-md">Home</span>
-          </div>
-          <div className="relative group">
-            <a href="#projects" className="hover:text-blue-500"><FaProjectDiagram /></a>
-            <span className="absolute left-1/2 transform -translate-x-1/2 bottom-8 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-xs px-2 py-1 rounded-md">Projects</span>
-          </div>
-          <div className="relative group">
-            <a href="#work" className="hover:text-blue-500"><FaBriefcase /></a>
-            <span className="absolute left-1/2 transform -translate-x-1/2 bottom-8 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-xs px-2 py-1 rounded-md">Work Experience</span>
-          </div>
-          <div className="relative group">
-            <a href="#contact" className="hover:text-blue-500"><FaPhone /></a>
-            <span className="absolute left-1/2 transform -translate-x-1/2 bottom-8 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-xs px-2 py-1 rounded-md">Contact</span>
-          </div>
-        </nav>
+        <Navbar />
 
         <div className="bg-gray-900 text-white min-h-screen p-8 grid grid-cols-[420px_auto] gap-6">
           {/* Left Side (Fixed) */}
