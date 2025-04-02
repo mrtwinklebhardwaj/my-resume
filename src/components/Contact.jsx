@@ -54,7 +54,7 @@ const Contact = () => {
 
           {/* reCAPTCHA placeholder */}
           <div className="my-4">
-            <div className="g-recaptcha" data-netlify-recaptcha="true"></div>
+            <div className="g-recaptcha" data-netlify-recaptcha="true"  data-sitekey="6LfUAQgrAAAAAN52C4CpyY-Z9O1SFJ7I36u55gHm"></div>
           </div>
 
           <button
