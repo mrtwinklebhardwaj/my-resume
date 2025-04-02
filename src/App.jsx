@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import Contact from './components/Contact';
 
 export default function App() {
   return (
@@ -113,27 +114,7 @@ export default function App() {
         <div className="max-w-2xl mx-auto text-center">
           <h3 className="text-2xl font-semibold mb-4">Get in Touch</h3>
           <p className="text-[#505050] mb-6">Fill out the form below to send me a message directly.</p>
-          <form action="https://formspree.io/f/your-form-id" method="POST" className="space-y-4 text-left">
-            <div>
-              <label className="block text-sm mb-1 font-medium" htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" required className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-300"/>
-            </div>
-            <div>
-              <label className="block text-sm mb-1 font-medium" htmlFor="email">Email</label>
-              <input type="email" id="email" name="_replyto" required className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-300"/>
-            </div>
-            <div>
-              <label className="block text-sm mb-1 font-medium" htmlFor="message">Message</label>
-              <textarea id="message" name="message" rows="5" required className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-300"></textarea>
-            </div>
-        
-            <div className="my-4">
-          
-<div className="g-recaptcha" data-sitekey="6Ld-4gcrAAAAAEjtwAq1_1r_g3YECE0TtyV6NNJl"></div>
-
-            </div>
-            <button type="submit" className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Send Message</button>
-          </form>
+        <Contact />
         </div>
       </section>
 
