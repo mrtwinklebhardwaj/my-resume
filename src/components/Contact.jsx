@@ -7,10 +7,7 @@ const Contact = () => {
         <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
 
         <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          data-netlify-recaptcha="true"
+          name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true"
           className="space-y-4 text-left"
         >
           {/* Netlify hidden input for form name */}
