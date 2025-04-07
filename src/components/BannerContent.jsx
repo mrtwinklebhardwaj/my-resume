@@ -21,14 +21,15 @@ const BannerContent = () => {
         Specialized in <span className="tech-stack">ReactJs</span> and <span className="tech-stack">UI Architecture</span>
       </p>
 
-      <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6 mb-8">
-        <a href="mailto:mrtwinkle@outlook.com" className="gradient-outline-btn w-full sm:w-auto">
-          Say Hi
-        </a>
-        <a href="/twinkle_bhardwaj_resume.pdf" target="_blank" rel="noopener noreferrer" className="gradient-outline-btn w-full sm:w-auto">
-          Resume
-        </a>
-      </div>
+      <div className="flex flex-col sm:flex-row items-center sm:items-stretch justify-center sm:justify-center gap-4 mt-6 mb-8">
+  <a href="mailto:mrtwinkle@outlook.com" className="gradient-outline-btn w-full sm:w-auto text-center">
+    Say Hi
+  </a>
+  <a href="/twinkle_bhardwaj_resume.pdf" target="_blank" rel="noopener noreferrer" className="gradient-outline-btn w-full sm:w-auto text-center">
+    Resume
+  </a>
+</div>
+
     </>
   );
 };

@@ -8,7 +8,7 @@ const NavigationComponent = ({ variant = 'top' }) => {
   return (
     <nav
       className={`
-        ${isBottom ? 'fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-white/10 border border-white/10' : ''}
+        ${isBottom ? 'fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 sm:backdrop-blur-md backdrop-blur-none  bg-[#010319] border border-white/10' : ''}
         w-[300px] h-[48px] rounded-[10px] px-[10px] flex items-center justify-between
         ${isBottom ? '' : 'bg-[#010319] border border-[rgba(245,245,245,0.2)] mx-auto mb-8'}
       `}

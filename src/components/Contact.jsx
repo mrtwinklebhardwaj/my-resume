@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="py-8 px-4 bg-white/5 backdrop-blur-md rounded-lg shadow border border-white/10" id="contact">
+    <section className="py-8 px-4 bg-white/5 sm:backdrop-blur-md backdrop-blur-none rounded-lg shadow border border-white/10" id="contact">
       <div className="max-w-2xl mx-auto text-center">
         <h3 className="text-2xl font-semibold mb-4 text-[#E3ECFF]">Get in Touch</h3>
         <p className="text-[#E3ECFF] mb-6">Fill out the form below to send me a message directly.</p>
@@ -21,7 +21,7 @@ const Contact = () => {
                   type="text"
                   name="name"
                   required
-                  className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400"
+                  className="w-full text-white placeholder-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400 bg-gradient-to-r from-[#1f3a8a] to-[#6366f0] border border-white/20"
                 />
               </div>
 
@@ -33,7 +33,7 @@ const Contact = () => {
                   type="email"
                   name="email"
                   required
-                  className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400"
+                   className="w-full text-white placeholder-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400 bg-gradient-to-r from-[#1f3a8a] to-[#6366f0] border border-white/20"
                 />
               </div>
 
@@ -45,7 +45,7 @@ const Contact = () => {
                   name="message"
                   rows="5"
                   required
-                  className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400"
+                   className="w-full text-white placeholder-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400 bg-gradient-to-r from-[#1f3a8a] to-[#6366f0] border border-white/20"
                 ></textarea>
               </div>
 

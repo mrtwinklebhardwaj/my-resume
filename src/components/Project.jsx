@@ -2,7 +2,7 @@ import React from 'react'
 
 const Project = () => {
     return (
-        <section className="py-8 px-4 bg-[#010319]/60 backdrop-blur-md p-6 rounded-lg shadow border border-white/10 mb-16" id="projects">
+        <section className="py-8 px-4 bg-[#010319]/60 sm:backdrop-blur-md backdrop-blur-none p-6 rounded-lg shadow border border-white/10 mb-16" id="projects">
             <div className="max-w-5xl mx-auto">
                 <h3 className="text-2xl font-semibold mb-6 text-[#E3ECFF]">Projects</h3>
                 <div className="inline-block px-4 py-2 text-sm bg-white/10 text-[#D1D5DB] rounded-full border border-white/20">

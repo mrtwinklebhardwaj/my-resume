@@ -17,30 +17,35 @@ import Footer from './components/Footer';
 
 
 const App = () => {
-    const [showBottomNav, setShowBottomNav] = useState(false);
+  const [showBottomNav, setShowBottomNav] = useState(false);
 
-    useEffect(() => {
-      const onScroll = () => setShowBottomNav(window.scrollY > 100);
-      window.addEventListener('scroll', onScroll);
-      return () => window.removeEventListener('scroll', onScroll);
-    }, []);
-  
+  useEffect(() => {
+    const onScroll = () => setShowBottomNav(window.scrollY > 100);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <main className="bg-[#010319]">
-      <div className="container mx-auto px-8 pt-8 pb-8">
+    <main className="relative bg-[#010319] ">
+      {/* Background layer */}
+      <div className="hero-section" />
 
-        {/* Navigation aligned with right side */}
+      {/* Foreground content */}
+      <div className="relative z-10 px-8 pt-8 pb-8 max-w-[1440px] mx-auto">
+        {/* Top Navigation */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
           <div className="lg:col-start-5 lg:col-span-8">
             <NavigationComponent />
           </div>
         </div>
 
-        {/* Main Grid */}
+        {/* Main Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Left Sticky Section */}
-          <div className="hidden lg:block lg:col-span-4 sticky top-24 self-start h-fit animate-float3d">
-            <IntroCard />
+          {/* Sticky Left Card */}
+          <div className="hidden lg:block lg:col-span-4">
+            <div className="sticky top-24 z-10 animate-float3d">
+              <IntroCard />
+            </div>
           </div>
 
           {/* Mobile version */}
@@ -48,7 +53,7 @@ const App = () => {
             <IntroCard />
           </div>
 
-          {/* Right Side Content */}
+          {/* Right Scrollable Section */}
           <div className="lg:col-span-8">
             <BannerContent />
             <TechStack />
@@ -63,10 +68,11 @@ const App = () => {
           </div>
         </div>
       </div>
-      {showBottomNav && (
-        <NavigationComponent variant="bottom" />
-      )}
+
+      {/* Bottom Navigation */}
+      {showBottomNav && <NavigationComponent variant="bottom" />}
     </main>
+
   );
 };
 
