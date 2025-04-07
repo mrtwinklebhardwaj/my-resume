@@ -39,7 +39,7 @@ const App = () => {
         {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Sticky Section */}
-          <div className="hidden lg:block lg:col-span-4 sticky top-24 self-start h-fit">
+          <div className="hidden lg:block lg:col-span-4 sticky top-24 self-start h-fit animate-float3d">
             <IntroCard />
           </div>
 
