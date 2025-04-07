@@ -1,10 +1,18 @@
 import React from 'react';
 
-const NavigationComponent = () => {
+const NavigationComponent = ({ variant = 'top' }) => {
   const navItems = ['Home', 'About', 'Experience', 'Projects', 'Contact'];
 
+  const isBottom = variant === 'bottom';
+
   return (
-    <nav className="w-[300px] h-[48px] bg-[#010319] border border-[rgba(245,245,245,0.2)] rounded-[10px] px-[10px] flex items-center justify-between mx-auto mb-8">
+    <nav
+      className={`
+        ${isBottom ? 'fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-white/10 border border-white/10' : ''}
+        w-[300px] h-[48px] rounded-[10px] px-[10px] flex items-center justify-between
+        ${isBottom ? '' : 'bg-[#010319] border border-[rgba(245,245,245,0.2)] mx-auto mb-8'}
+      `}
+    >
       {navItems.map((item, index) => (
         <a
           key={index}
