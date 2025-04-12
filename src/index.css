@@ -26,6 +26,55 @@ html {
     scrollbar-color: #5050BC #010319;
   }
   
+  /* Banner Animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .animate-fade-in-up-delay-1 {
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-up-delay-2 {
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-up-delay-3 {
+    animation: fadeInUp 1s ease-out 0.9s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .typewriter-gradient {
+    background: linear-gradient(90deg, #B8A7ED, #5050BC, #B8A7ED);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 3s linear infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
   .hero-section {
     position: fixed;
     top: 0;
@@ -51,7 +100,30 @@ html {
     z-index: 0;
   }
   
-  
+  /* Typewriter Animation */
+  .typewriter-text {
+    display: inline-block;
+    position: relative;
+  }
+
+  .animate-blink {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: #E3ECFF;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    from, to {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
 .intro-box{
   transform: translateZ(0); 
     background-color: #010319;
@@ -198,5 +270,77 @@ html {
   .gradient-outline-btn:hover::before {
     background: linear-gradient(90deg, #B8A7ED 0%, #7A76F5 100%); /* Slight shift in gradient */
   }
+
+/* Gravity Effect Animations */
+.gravity-effect {
+  animation: gravityFloat 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.gravity-effect:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.gravity-effect:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.gravity-effect:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes gravityFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+.designation {
+  background-color: #1f3a8a;
+  background-image: linear-gradient(90deg, #1f3a8a 0%, #312f81 53%, #6366f0 100%);
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #E3ECFF;
+  font-size: 48px;
+  font-weight: 800;
+  animation: gravityFloat 4s ease-in-out infinite;
+}
+
+.tech-stack {
+  background-color: #1f3a8a;
+  background-image: linear-gradient(90deg, #1f3a8a 0%, #312f81 53%, #6366f0 100%);
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #E3ECFF;
+  font-size: 28px;
+  font-weight: 600;
+  margin-right: 2px;
+  margin-left: 2px;
+  white-space: nowrap;
+  margin: 2px;
+  display: inline-block;
+  animation: gravityFloat 4s ease-in-out infinite;
+}
+
+.tech-stack:first-child {
+  margin-left: 0px;
+  animation-delay: 0s;
+}
+
+.tech-stack:last-child {
+  margin-right: 0px;
+  animation-delay: 0.4s;
+}
 
 

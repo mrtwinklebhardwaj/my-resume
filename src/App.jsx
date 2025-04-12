@@ -14,10 +14,11 @@ import CaseStudies from './components/CaseStudies';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
+import Notes from './components/Notes';
 
 const App = () => {
   const [showBottomNav, setShowBottomNav] = useState(false);
+  const [currentSection, setCurrentSection] = useState('home');
 
   useEffect(() => {
     const onScroll = () => setShowBottomNav(window.scrollY > 100);
@@ -25,8 +26,49 @@ const App = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    // Handle initial hash and hash changes
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        setCurrentSection(hash);
+        if (hash !== 'notes') {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const renderContent = () => {
+    if (currentSection === 'notes') {
+      return <Notes />;
+    }
+
+    return (
+      <>
+        <BannerContent id="home" />
+        <TechStack id="about" />
+        <AboutMe />
+        <Experience id="experience" />
+        <AreaOfExperties />
+        <Project id="projects" />
+        <CaseStudies />
+        <Blog />
+        <Contact id="contact" />
+        <Footer />
+      </>
+    );
+  };
+
   return (
-    <main className="relative bg-[#010319] ">
+    <main className="relative bg-[#010319]">
       {/* Background layer */}
       <div className="hero-section" />
 
@@ -35,7 +77,7 @@ const App = () => {
         {/* Top Navigation */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
           <div className="lg:col-start-5 lg:col-span-8">
-            <NavigationComponent />
+            <NavigationComponent onSectionChange={setCurrentSection} />
           </div>
         </div>
 
@@ -55,26 +97,15 @@ const App = () => {
 
           {/* Right Scrollable Section */}
           <div className="lg:col-span-8">
-            <BannerContent />
-            <TechStack />
-            <AboutMe />
-            <Experience />
-            <AreaOfExperties />
-            <Project />
-            <CaseStudies />
-            <Blog />
-            <Contact />
-            <Footer />
+            {renderContent()}
           </div>
         </div>
       </div>
 
       {/* Bottom Navigation */}
-      {showBottomNav && <NavigationComponent variant="bottom" />}
+      {showBottomNav && <NavigationComponent variant="bottom" onSectionChange={setCurrentSection} />}
     </main>
-
   );
 };
 
 export default App;
-``
