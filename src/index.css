@@ -236,40 +236,52 @@ html {
   background-clip: padding-box;
   width: 236px;
   text-align: center;
-  z-index: 10; /* ✅ force above */
+  z-index: 10;
   position: relative;
-  isolation: isolate; /* ✅ create a stacking context */
+  isolation: isolate;
+  overflow: hidden;
 }
 
-  
-  .gradient-outline-btn::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(90deg, #B8A7ED 0%, #5050BC 100%);
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-    z-index: -1; /* ✅ behind actual button */
-  }
-  
+.gradient-outline-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg, #B8A7ED 0%, #5050BC 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
 
+.gradient-outline-btn::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  height: 155px;
+  left: -75px;
+  opacity: .2;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
 
-  
-  .gradient-outline-btn:hover {
-    background-color: rgba(184, 167, 237, 0.1); /* Optional fill on hover */
-    color: #ffffff; /* Text turns white on hover */
-    transform: translateY(-2px); /* Subtle lift */
-  }
-  
-  .gradient-outline-btn:hover::before {
-    background: linear-gradient(90deg, #B8A7ED 0%, #7A76F5 100%); /* Slight shift in gradient */
-  }
+.gradient-outline-btn:hover {
+  background-color: rgba(184, 167, 237, 0.1);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.gradient-outline-btn:hover::after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
 
 /* Gravity Effect Animations */
 .gravity-effect {
@@ -313,7 +325,7 @@ html {
   color: #E3ECFF;
   font-size: 48px;
   font-weight: 800;
-  animation: gravityFloat 4s ease-in-out infinite;
+  /* animation: gravityFloat 4s ease-in-out infinite; */
 }
 
 .tech-stack {
@@ -330,7 +342,7 @@ html {
   white-space: nowrap;
   margin: 2px;
   display: inline-block;
-  animation: gravityFloat 4s ease-in-out infinite;
+  /* animation: gravityFloat 4s ease-in-out infinite; */
 }
 
 .tech-stack:first-child {

@@ -56,8 +56,8 @@ const App = () => {
         <BannerContent id="home" />
         <TechStack id="about" />
         <AboutMe />
-        <Experience id="experience" />
         <AreaOfExperties />
+        <Experience id="experience" />
         <Project id="projects" />
         <CaseStudies />
         <Blog />

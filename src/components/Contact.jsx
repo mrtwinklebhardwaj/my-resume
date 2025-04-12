@@ -21,7 +21,7 @@ const Contact = () => {
                   type="text"
                   name="name"
                   required
-                  className="w-full text-white placeholder-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400 bg-gradient-to-r from-[#1f3a8a] to-[#6366f0] border border-white/20"
+                  className="w-full text-white placeholder-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400 bg-gradient-to-r from-[#010319] to-[#1d3873] border border-white/20"
                 />
               </div>
 
@@ -33,7 +33,7 @@ const Contact = () => {
                   type="email"
                   name="email"
                   required
-                   className="w-full text-white placeholder-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400 bg-gradient-to-r from-[#1f3a8a] to-[#6366f0] border border-white/20"
+                   className="w-full text-white placeholder-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400 bg-gradient-to-r from-[#010319] to-[#1d3873] border border-white/20"
                 />
               </div>
 
@@ -45,7 +45,7 @@ const Contact = () => {
                   name="message"
                   rows="5"
                   required
-                   className="w-full text-white placeholder-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400 bg-gradient-to-r from-[#1f3a8a] to-[#6366f0] border border-white/20"
+                   className="w-full text-white placeholder-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:border-blue-400 bg-gradient-to-r from-[#010319] to-[#1d3873] border border-white/20"
                 ></textarea>
               </div>
 

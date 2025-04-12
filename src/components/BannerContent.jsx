@@ -2,7 +2,7 @@ import React from 'react';
 import Typewriter from './Typewriter';
 
 const BannerContent = () => {
-  const roles = ['UI Engineer', 'Frontend Developer', 'React Developer'];
+  const roles = ['think.', 'build.', 'deploy.'];
 
   return (
     <>
@@ -11,18 +11,28 @@ const BannerContent = () => {
         id="home"
         style={{ lineHeight: '1.2' }}
       >
-        Hi, I'm Twinkle Bhardwaj,
-        <br />
-        <span className="text-left block animate-fade-in-up-delay-1">
-          a <Typewriter words={roles} delay={2000} typingSpeed={100} deletingSpeed={50} className="typewriter-gradient" />.
-        </span>
+        <div className="block">
+          Hi, I'm Twinkle Bhardwaj,
+        </div>
+        <div className="block sm:inline">
+          a UI engineer who{' '}
+          <span className="block sm:inline min-h-[1.5em]">
+            <Typewriter 
+              words={roles} 
+              delay={2000} 
+              typingSpeed={100} 
+              deletingSpeed={50} 
+              className="typewriter-gradient" 
+            />
+          </span>
+        </div>
       </h1>
 
-      <div className="designation text-center text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-bold text-[#E3ECFF] mb-8 mx-auto">
+      <div className="designation text-center text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-bold text-[#E3ECFF] mb-8 mx-auto animate-fade-in-up-delay-2">
         FRONT-END DEVELOPER
       </div>
 
-      <p className="text-center text-[18px] sm:text-[22px] md:text-[24px] lg:text-[28px] font-semibold text-[#E3ECFF] mb-4 mx-auto">
+      <p className="text-center text-[18px] sm:text-[22px] md:text-[24px] lg:text-[28px] font-semibold text-[#E3ECFF] mb-4 mx-auto animate-fade-in-up-delay-2">
         Specialized in <span className="tech-stack">ReactJs</span> and <span className="tech-stack">UI Architecture</span>
       </p>
 
