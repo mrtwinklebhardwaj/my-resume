@@ -205,30 +205,7 @@ html {
     display: inline-block;
 }
 
-/* Responsive scaling */
-@media (max-width: 768px) {
-  .designation {
-    font-size: 32px;
-    padding: 8px 16px;
-  }
 
-  .tech-stack {
-    font-size: 20px;
-    padding: 4px 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .designation {
-    font-size: 24px;
-    padding: 6px 14px;
-  }
-
-  .tech-stack {
-    font-size: 18px;
-    padding: 3px 6px;
-  }
-}
 
 .gradient-outline-btn {
   @apply px-12 py-[14px] rounded-[8px] text-[#E3ECFF] font-semibold text-[20px] relative bg-transparent;
@@ -356,3 +333,27 @@ html {
 }
 
 
+/* Responsive scaling */
+@media (max-width: 768px) {
+  .designation {
+    font-size: 32px;
+    padding: 8px 16px;
+  }
+
+  .tech-stack {
+    font-size: 20px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .designation {
+    font-size: 24px;
+    padding: 6px 14px;
+  }
+
+  .tech-stack {
+    font-size: 18px;
+    padding: 3px 6px;
+  }
+}

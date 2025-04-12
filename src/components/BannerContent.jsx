@@ -2,31 +2,34 @@ import React from 'react';
 import Typewriter from './Typewriter';
 
 const BannerContent = () => {
-  const roles = ['think.', 'build.', 'deploy.'];
+  const roles = ['think', 'build', 'deploy'];
 
   return (
     <>
-      <h1
-        className="font-bold text-left text-[36px] sm:text-[42px] md:text-[48px] lg:text-[56px] text-[#E3ECFF] mb-12 sm:mb-16 animate-fade-in-up"
-        id="home"
-        style={{ lineHeight: '1.2' }}
-      >
-        <div className="block">
-          Hi, I'm Twinkle Bhardwaj,
-        </div>
-        <div className="block sm:inline">
-          a UI engineer who{' '}
-          <span className="block sm:inline min-h-[1.5em]">
-            <Typewriter 
-              words={roles} 
-              delay={2000} 
-              typingSpeed={100} 
-              deletingSpeed={50} 
-              className="typewriter-gradient" 
-            />
-          </span>
-        </div>
-      </h1>
+     <h1
+  className="font-bold text-[36px] sm:text-[42px] md:text-[48px] lg:text-[56px] text-[#E3ECFF] text-center mb-4 sm:mb-12 animate-fade-in-up"
+  id="home"
+  style={{ lineHeight: '1.2' }}
+>
+  <div className="block">Hi, I'm Twinkle Bhardwaj,</div>
+  <div className="block sm:inline">
+    a UI engineer who{' '}
+    <span
+  className="inline-block min-w-[200px] min-h-[1.5em] text-center font-mono"
+>
+  <Typewriter 
+    words={roles}
+    delay={2000}
+    typingSpeed={100}
+    deletingSpeed={50}
+    className="typewriter-gradient"
+  />
+</span>
+
+
+  </div>
+</h1>
+
 
       <div className="designation text-center text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-bold text-[#E3ECFF] mb-8 mx-auto animate-fade-in-up-delay-2">
         FRONT-END DEVELOPER
