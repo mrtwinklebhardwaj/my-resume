@@ -11,7 +11,7 @@ const BannerContent = () => {
   id="home"
   style={{ lineHeight: '1.2' }}
 >
-  <div className="block">Hi, I'm Manoj Bhardwaj,</div>
+  <div className="block">Hi, I'm Twinkle Bhardwaj,</div>
   <div className="block sm:inline">
     a UI engineer who{' '}
     <span
