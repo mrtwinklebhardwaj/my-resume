@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './index.css';
 import 'remixicon/fonts/remixicon.css';
 
@@ -19,6 +19,36 @@ import Notes from './components/Notes';
 const App = () => {
   const [showBottomNav, setShowBottomNav] = useState(false);
   const [currentSection, setCurrentSection] = useState('home');
+  const [blogs, setBlogs] = useState([]);
+  const [caseStudies, setCaseStudies] = useState([]);
+  const didFetch = useRef(false); 
+
+  useEffect(() => {
+    if (didFetch.current) return;
+    didFetch.current = true;
+
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@codeaurkahani')
+      .then((response) => response.json())
+      .then((data) => {
+        const posts = data.items || [];
+
+        const filteredPosts = posts.filter(post => post.categories.length > 0);
+
+        // Separate out case studies and blogs
+        const caseStudiesList = filteredPosts.filter(post =>
+          post.categories.includes('ux-case-study')
+        );
+        const blogPosts = filteredPosts.filter(post =>
+          !post.categories.includes('ux-case-study')
+        );
+
+        setCaseStudies(caseStudiesList.slice(0, 4)); // Only latest 4 if needed
+        setBlogs(blogPosts.slice(0, 4)); // Only latest 4 blogs
+      })
+      .catch((error) => {
+        console.error('Error fetching blog posts:', error);
+      });
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setShowBottomNav(window.scrollY > 100);
@@ -59,8 +89,8 @@ const App = () => {
         <AreaOfExperties />
         <Experience id="experience" />
         <Project id="projects" />
-        <CaseStudies />
-        <Blog />
+        <Blog blogs={blogs} />
+        <CaseStudies posts={caseStudies} />
         <Contact id="contact" />
         <Footer />
       </>

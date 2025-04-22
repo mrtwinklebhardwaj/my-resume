@@ -1,6 +1,31 @@
 import React from 'react';
 
-const CaseStudies = () => {
+const CaseStudies = ({posts=[]}) => {
+    const hasDynamicPosts = posts.length > 0;
+    const fallbackStudies = [
+        {
+            title: 'Command Center: Designing a Configurable Service Request Platform for Enterprise Ops',
+            url: 'https://medium.com/@codeaurkahani/command-center-designing-a-configurable-service-request-platform-for-enterprise-operations-2716a3760fe7',
+            desc: 'How we built a dynamic, stage-based service request system with modular workflows and field mapping, led by user-first R&D and design thinking.'
+        },
+        {
+            title: 'Designing a DORA Metrics Dashboard: A Data-Driven Approach to Engineering Performance',
+            url: 'https://medium.com/@codeaurkahani/designing-a-dora-metrics-dashboard-a-data-driven-approach-to-engineering-performance-de41124b99aa',
+            desc: 'Modern engineering teams struggle to measure release efficiency and team performance in a consistent, meaningful way.'
+        },
+        {
+            title: 'From React 16 to 18: Modernizing a Large-Scale Frontend Without Breaking Things',
+            url: 'https://medium.com/@codeaurkahani/from-react-16-to-18-modernizing-a-large-scale-frontend-without-breaking-things-efce1abc09c8',
+            desc: 'Modernizing a large-scale React app isn’t just about updating packages — it’s about preparing the codebase for the next 5 years.'
+        }
+    ];
+    const studiesToRender = hasDynamicPosts
+    ? posts.map(post => ({
+          title: post.title,
+          url: post.link,
+          desc: post.contentSnippet
+      }))
+    : fallbackStudies;
     const studies = [
         {
             title: 'Command Center: Designing a Configurable Service Request Platform for Enterprise Ops',
@@ -24,7 +49,7 @@ const CaseStudies = () => {
             <div className="max-w-5xl mx-auto">
                 <h3 className="text-2xl font-semibold mb-6 text-[#E3ECFF]">Case Studies</h3>
                 <div className="space-y-4">
-                    {studies.map((study, index) => (
+                {studiesToRender.map((study, index) => (
                         <a
                             key={index}
                             href={study.url}
