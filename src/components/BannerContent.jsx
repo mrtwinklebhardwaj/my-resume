@@ -43,7 +43,7 @@ const BannerContent = () => {
         <a href="mailto:mrtwinkle@outlook.com" className="gradient-outline-btn w-full sm:w-auto text-center hover:scale-105 transition-transform duration-300">
           Say Hi
         </a>
-        <a href="/twinkle_bhardwaj_resume.pdf" target="_blank" rel="noopener noreferrer" className="gradient-outline-btn w-full sm:w-auto text-center hover:scale-105 transition-transform duration-300">
+        <a href="/Resume_and_portfolio_Twinkle.pdf" target="_blank" rel="noopener noreferrer" className="gradient-outline-btn w-full sm:w-auto text-center hover:scale-105 transition-transform duration-300">
           Resume
         </a>
       </div>
